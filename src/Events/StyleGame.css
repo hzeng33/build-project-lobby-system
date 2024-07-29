@@ -1,0 +1,35 @@
+h2 {
+  color: navy;
+  font-size: 30px;
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.square {
+  background: #fff;
+  border: 2px solid black;
+  height: 45px;
+  width: 50px;
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+}
+
+.status {
+  margin-bottom: 10px;
+}
