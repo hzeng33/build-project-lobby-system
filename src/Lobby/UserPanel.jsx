@@ -1,23 +1,22 @@
 import "./style.css";
 
-export default function UserPanel() {
+export default function UserPanel({ createEvent, setEventType }) {
   return (
     <div>
       <h1>User Info</h1>
       <h2>Hannah Zeng</h2>
       <div className="event-content">
         <h3>Events</h3>
-        <select>
-          <option>Tic Tac Toe</option>
+        <select
+          onChange={(e) => {
+            setEventType(e.target.value);
+          }}
+        >
+          <option value={"Tic Tac Toe"}>Tic Tac Toe</option>
           <option>Other Event 1</option>
           <option>Other Event 2</option>
         </select>
-        <button>Create</button>
-      </div>
-
-      <div className="friend-list">
-        <h3>Friend List</h3>
-        <div></div>
+        <button onClick={createEvent}>Create</button>
       </div>
     </div>
   );
