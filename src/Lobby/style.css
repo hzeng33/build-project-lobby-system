@@ -21,25 +21,20 @@
 }
 
 .lobby-main > div {
-  border: 1px solid #00355b;
-  margin: -1px;
+  margin: 0.3em;
 }
 
 /*User Panel*/
 .lobby-main > div:nth-child(1) {
-  flex: 1 1 30%;
-  padding: 5px;
+  border: 1px solid #00355b;
+  flex: 1 1 23%;
+  padding: 1em;
 }
 
 .event-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.friend-list > div {
-  height: 200px;
-  border: 1px solid;
+  flex-wrap: wrap;
 }
 
 /*Event Preview*/
@@ -48,25 +43,31 @@
 }
 
 .preview-container {
+  padding: 0.3em auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   align-items: center;
 }
 
 .preview {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  margin: auto;
-  transition: 0.5s ease;
+  border: 1px solid rgb(139, 83, 212);
+  margin: 0.5em;
   display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 3%;
 }
 
-.preview:hover{
-    transform: scale(1.01);
-    border: 2px solid yellow;
+.preview:hover {
+  transform: scale(1.01);
+  border: 2px solid yellow;
+}
+
+.event-title {
+  font-size: 1rem;
+  margin: 0;
+  background-color: rgb(118, 223, 223);
+  width: 100%;
+  align-self: center;
 }

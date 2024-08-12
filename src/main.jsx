@@ -6,7 +6,7 @@ import Game from "./Events/Game.jsx";
 import Lobby from "./Lobby/index.jsx";
 
 const router = createBrowserRouter([
-  { path: "/:sessionId", element: <Game /> },
+  { path: "/tic-tac-toe", element: <Game /> },
   { path: "/", element: <Lobby /> },
 ]);
 
