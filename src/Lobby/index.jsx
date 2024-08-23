@@ -1,12 +1,14 @@
 import "./style.css";
 import UserPanel from "./UserPanel.jsx";
 import EventPreview from "./EventPreview.jsx";
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import useAuth from "../Auth/useAuth.js";
 const EVENT_INIT_OBJECT = {};
 
 export default function Lobby() {
+  const username = useAuth();
   const [events, setEvents] = useState([]);
-  const [eventType, setEventType] = useState(null);
+  const [eventType, setEventType] = useState("Tic-Tac-Toe");
 
   const genNewEvent = (restEventData) => {
     return {
@@ -17,12 +19,14 @@ export default function Lobby() {
   };
 
   const createEvent = () => {
-    setEvents((events) => [...events, genNewEvent({ type: eventType })]);
+    setEvents((events) => [
+      ...events,
+      genNewEvent({ type: eventType, player: [username] }),
+    ]);
   };
 
   return (
     <div className="lobby-container">
-      <nav>Welcome!</nav>
       <div className="lobby-main">
         <UserPanel createEvent={createEvent} setEventType={setEventType} />
         <EventPreview events={events} />

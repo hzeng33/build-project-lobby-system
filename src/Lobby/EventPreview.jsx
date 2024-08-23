@@ -9,9 +9,10 @@ function RectPreview({ event }) {
 
   return (
     <div className="preview" onClick={onJoinEvent}>
-      <div className="event-title">Tic Tac Toe</div>
-      <user>User #</user>
-      <use>Tester</use>
+      <div className="event-title">{event.type}</div>
+      {event.player.map((player) => (
+        <div>{player}</div>
+      ))}
     </div>
   );
 }

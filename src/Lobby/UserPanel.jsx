@@ -1,10 +1,11 @@
 import "./style.css";
+import useAuth from "../Auth/useAuth";
 
 export default function UserPanel({ createEvent, setEventType }) {
   return (
     <div>
       <h1>User Info</h1>
-      <h2>Hannah Zeng</h2>
+      <h2>{username}</h2>
       <div className="event-content">
         <h3>Events</h3>
         <select
