@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { GAME_STAGE } from "../../../constants/game";
 import Board from "../Board";
+import { useNavigate } from "react-router-dom";
 
 export default function StartAndEnd({
   displayWinner,
@@ -12,6 +13,13 @@ export default function StartAndEnd({
   userName,
 }) {
   const playerSymbol = gameMetadata.symbolMap[userName];
+
+  const navigate = useNavigate();
+
+  const handleBackToLobby = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <h3>Winner is {displayWinner}</h3>
@@ -24,6 +32,9 @@ export default function StartAndEnd({
           disablePlayerMove || gameMetadata.stage === GAME_STAGE.END
         }
       />
+      <button className="leaveBtn" onClick={handleBackToLobby}>
+        Back To Lobby
+      </button>
     </>
   );
 }

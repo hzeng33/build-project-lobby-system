@@ -47,3 +47,10 @@
   line-height: var(--cellSize);
   font-size: var(--cellSize);
 }
+
+.leaveBtn {
+  margin-top: 2em;
+  background-color: rgb(3, 43, 88);
+  color: white;
+  text-align: center;
+}
