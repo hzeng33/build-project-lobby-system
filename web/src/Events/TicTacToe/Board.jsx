@@ -1,15 +1,20 @@
 /* eslint-disable react/prop-types */
-import Cell from './Cell'
-import { TIC_TAC_TOE } from './constants'
+import Cell from "./Cell";
+import { TIC_TAC_TOE } from "./constants";
 
-export default function Board({ disablePlayerMove, boardState, onPlayerMove, ...props }) {
+export default function Board({
+  disablePlayerMove,
+  boardState,
+  onPlayerMove,
+  ...props
+}) {
   const styleObj = {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    width: 'calc(var(--cellSize) * 3)',
-    height: 'calc(var(--cellSize) * 3)',
-    margin: 'auto',
-  }
+    display: "flex",
+    flexFlow: "row wrap",
+    width: "calc(var(--cellSize) * 3)",
+    height: "calc(var(--cellSize) * 3)",
+    margin: "auto",
+  };
 
   return (
     <>
@@ -23,10 +28,10 @@ export default function Board({ disablePlayerMove, boardState, onPlayerMove, ...
                 symbol={boardState[i][j]}
                 disabled={disablePlayerMove}
               />
-            )
-          })
+            );
+          });
         })}
       </div>
     </>
-  )
+  );
 }

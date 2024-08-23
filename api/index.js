@@ -30,9 +30,10 @@ app.get("/events/:id", (request, response) => {
   const event = events.find((event) => event.id === eventId);
   return response.json(event || null);
 });
-//3000 is the port number
-expressServer.listen(3000, () => {
-  console.log("server running at 3000");
+
+// 8080 is the port number
+expressServer.listen(8080, () => {
+  console.log("server running at 8080");
 });
 
 const users = [];

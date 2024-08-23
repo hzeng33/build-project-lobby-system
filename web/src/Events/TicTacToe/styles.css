@@ -1,7 +1,6 @@
-*{
-  --cellSize:5rem;
+* {
+  --cellSize: 5rem;
 }
-
 
 .logo {
   height: 6em;
@@ -39,12 +38,12 @@
   color: #888;
 }
 
-.cell{
-  width:var(--cellSize);
-  height:var(--cellSize);
-  flex:1 1 33.33%;
-  border:1px solid;
-  margin:-1px;
-  line-height:var(--cellSize) ;
+.cell {
+  width: var(--cellSize);
+  height: var(--cellSize);
+  flex: 1 1 33.33%;
+  border: 1px solid;
+  margin: -1px;
+  line-height: var(--cellSize);
   font-size: var(--cellSize);
 }

@@ -22,6 +22,7 @@ function RectPreview({ event }) {
     </div>
   );
 }
+
 export default function EventPreview({ events }) {
   return (
     <div className="preview-container">
