@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ### The Lobby System
-[Lobby System](https://github.com/hzeng33/build-project-lobby-system/blob/main/Hannah.png)
+![Lobby System](Hannah.png)
